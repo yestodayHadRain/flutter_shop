@@ -104,7 +104,7 @@ class _RightCategoryNavState extends State<RightCategoryNav> {
 
   List list = cateList[0]['bxMallSubDto'];
   // List list = ['名酒', '宝丰', '北京二锅头', '大明', '杜康', '顿丘', '汾酒', '枫林', '高粱酒', '古井', '贵州大曲', '国池'];
-  // List list = ['名酒','宝丰','北京二锅头'];
+  // List list = ['名酒','宝丰','北京二锅头']; 
 @override
   void initState() {
     super.initState();

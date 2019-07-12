@@ -1,18 +1,25 @@
-const serviceUrl = 'http://test.baixingliangfan.cn/baixing/';
-const servicePath = {
-  'homePageContext': serviceUrl+'wxmini/homePageContent',
-  // 'homePageContext': 'https://camorope-client-a.meiqia.com/pusher/info?browser_id=704f512fe4121090493c564317472e26&ent_id=7772&track_id=1KGMWhU0wrqqaghT7DHxZ0PAyb4&visit_id=1NUt4PP88zhDCGhKkFq4ELT7Z8f&t=1562147249460',
-  'headers': {
-    'Host': 'camorope-client-a.meiqia.com',
-    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',
-    'Accept': '*/*',
-    'Accept-Language': 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-    'Accept-Encoding': 'gzip, deflate, br',
-    'Referer': 'https://new-api.meiqia.com/dist/desktop-fiesta.html?cpkjy7nte7v',
-    'Origin': 'https://new-api.meiqia.com',
-    'Connection': 'keep-alive'
-  }
+const serviceUrl = 'http://v.jspang.com:8088/baixing/';
+const servicePath={
+  'homePageContext': serviceUrl+'wxmini/homePageContent', // 商家首页信息
+  'homePageBelowConten': serviceUrl+'wxmini/homePageBelowConten', //商城首页热卖商品拉取
+  'getCategory': serviceUrl+'wxmini/getCategory', //商品类别信息
+  'getMallGoods': serviceUrl+'wxmini/getMallGoods', //商品分类的商品列表
+  'getGoodDetailById':serviceUrl+'wxmini/getGoodDetailById', //商品详细信息列表
 };
+// const servicePath = {
+//   'homePageContext': serviceUrl+'wxmini/homePageContent',
+//   // 'homePageContext': 'https://camorope-client-a.meiqia.com/pusher/info?browser_id=704f512fe4121090493c564317472e26&ent_id=7772&track_id=1KGMWhU0wrqqaghT7DHxZ0PAyb4&visit_id=1NUt4PP88zhDCGhKkFq4ELT7Z8f&t=1562147249460',
+//   'headers': {
+//     'Host': 'camorope-client-a.meiqia.com',
+//     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:67.0) Gecko/20100101 Firefox/67.0',
+//     'Accept': '*/*',
+//     'Accept-Language': 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+//     'Accept-Encoding': 'gzip, deflate, br',
+//     'Referer': 'https://new-api.meiqia.com/dist/desktop-fiesta.html?cpkjy7nte7v',
+//     'Origin': 'https://new-api.meiqia.com',
+//     'Connection': 'keep-alive'
+//   }
+// };
 const dataList = [
       'https://pic3.zhimg.com/80/v2-e34f9372a05a00a6f5778f6357ec2b0d_hd.jpg',
       'https://pic4.zhimg.com/80/v2-8edde88d4f64057c7e99847164445555_hd.jpg',
