@@ -228,7 +228,7 @@ class TopNavigator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: ScreenUtil().setHeight(285),
+      height: ScreenUtil().setHeight(300),
       padding: EdgeInsets.all(3.0),
       child: GridView.count(
         physics: NeverScrollableScrollPhysics(),
@@ -278,6 +278,7 @@ class LeaderPhone extends StatelessWidget {
     } else {
       throw Exception('暂时不能拨打电话');
     }
+      // await launch(url);
   }
 }
 
@@ -321,7 +322,7 @@ class Recommend extends StatelessWidget {
 
   Widget _recommedList(){
     return Container(
-      height: ScreenUtil().setHeight(330),
+      height: ScreenUtil().setHeight(320),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: recommendList.length,
