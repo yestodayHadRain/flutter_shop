@@ -7,15 +7,20 @@ import './provide/child_category.dart';
 import './provide/category_goods_list.dart';
 import './routers/routes.dart';
 import './routers/applicantion.dart';
+import './provide/details_info.dart';
 
 void main() {
   var counter = Counter();
   var providers = Providers();
   var childCategory = ChildCategory();
+  var detailsInfoProvide = DetailsInfoProvide();
   var categoryGoodsListProvide = CategoryGoodsListProvide();
+
+
   providers
     ..provide(Provider<Counter>.value(counter))
     ..provide(Provider<CategoryGoodsListProvide>.value(categoryGoodsListProvide))
+    ..provide(Provider<DetailsInfoProvide>.value(detailsInfoProvide))
     ..provide(Provider<ChildCategory>.value(childCategory));
 
   runApp(ProviderNode(child: MyApp(), providers: providers,));
