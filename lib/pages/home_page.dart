@@ -203,7 +203,12 @@ class SwiperDiy extends StatelessWidget {
       height: ScreenUtil().setHeight(250),
       child: Swiper(
         itemBuilder: (BuildContext context, int index){
-          return Image.network("${swiperDataList[index]['image']}", fit:BoxFit.fill);
+          return InkWell(
+            onTap: (){
+              Application.router.navigateTo(context, "/detail?id=${swiperDataList[index]['goodsId']}");
+            },
+            child: Image.network("${swiperDataList[index]['image']}", fit:BoxFit.fill),
+          );
         },
         itemCount: swiperDataList.length,
         pagination: SwiperPagination(),
@@ -339,7 +344,9 @@ class Recommend extends StatelessWidget {
 
   Widget _item(index,context){
     return InkWell(
-      onTap: (){},
+      onTap: (){
+        Application.router.navigateTo(context, "/detail?id=${recommendList[index]['goodsId']}");
+      },
       child: Container(
         height: ScreenUtil().setHeight(330),
         width: ScreenUtil().setWidth(250),
@@ -393,41 +400,43 @@ class FloorContext extends StatelessWidget {
     return Container(
       child: Column(
         children: <Widget>[
-          _firstRow(),
-          _secondRow()
+          _firstRow(context),
+          _secondRow(context)
         ],
       ),
     );
   }
 
-  Widget _firstRow(){
+  Widget _firstRow(context){
     return Row(
       children: <Widget>[
-        _items(floorGoodsList[0]),
+        _items(context,floorGoodsList[0]),
         Column(
           children: <Widget>[
-            _items(floorGoodsList[1]),
-            _items(floorGoodsList[2])
+            _items(context,floorGoodsList[1]),
+            _items(context,floorGoodsList[2])
           ],
         )
       ],
     );
   }
  
-  Widget _secondRow(){
+  Widget _secondRow(context){
     return Row(
       children: <Widget>[
-        _items(floorGoodsList[3]),
-        _items(floorGoodsList[4])
+        _items(context,floorGoodsList[3]),
+        _items(context,floorGoodsList[4])
       ],
     );
   }
 
-  Widget _items(Map good){
+  Widget _items(context,Map good){
     return Container(
       width: ScreenUtil().setWidth(375),
       child: InkWell(
-        onTap: (){},
+        onTap: (){
+          Application.router.navigateTo(context, "/detail?id=${good['goodsId']}");
+        },
         child: Image.network(good['image']),
       ),
     );
