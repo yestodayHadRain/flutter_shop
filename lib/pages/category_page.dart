@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' as prefix0;
 import 'package:flutter_shop/provide/child_category.dart';
 import 'package:flutter_shop/service/service_method.dart';
 import 'package:provide/provide.dart';
@@ -344,6 +345,7 @@ class _CategoryGoodsListState extends State<CategoryGoodsList> {
       ),
     );
   }
+
 
   Widget _ListWidget(List newList,int index){
     return InkWell(
